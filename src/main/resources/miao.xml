@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cat12" class="xyz.txk.hellospring.pojo.Cat"/>
+    <bean id="dog12" class="xyz.txk.hellospring.pojo.Dog"/>
+
+    <bean id="people" class="xyz.txk.hellospring.pojo.People" autowire="byType">
+        <property name="name" value="txkkk"/>
+<!--        <property name="cat" ref="cat"/>-->
+<!--        <property name="dog" ref="dog"/>-->
+    </bean>
+</beans>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    <import resource="beans.xml"/>-->
+<!--    <import resource="miao.xml"/>-->
+<!--    <import resource="Introduction.xml"/>-->
+<!--    <import resource="introduction1.xml"/>-->
+    <import resource="spring-dao.xml"/>
+
+
+    <bean id="address" class="xyz.txk.hellospring.pojo.Address">
+        <property name="address" value="everywhere"/>
+    </bean>
+
+    <bean id="student" class="xyz.txk.hellospring.pojo.Student">
+        <property name="name" value="txk"/>
+        <property name="address" ref="address"/>
+        <property name="books">
+            <array>
+                <value>MSF-从入门到跑路</value>
+                <value>论`rm -rf /*`</value>
+                <value>一键日卫星</value>
+            </array>
+        </property>
+        <property name="hobbys">
+            <list>
+                <value>日站</value>
+                <value>日站</value>
+                <value>还是TMD，日站</value>
+                <value>······</value>
+                <value>警察叔叔我是好人！！</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="ikun1" value="唱"/>
+                <entry key="ikun2" value="跳"/>
+                <entry key="ikun3" value="rap"/>
+                <entry key="ikun4" value="篮球"/>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>CF</value>
+                <value>COD</value>
+                <value>CSGO</value>
+                <value>LOL</value>
+            </set>
+        </property>
+        <property name="girlfriend">
+            <null/>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="user">root</prop>
+                <prop key="pwd">123456</prop>
+                <prop key="msg">The strength of the password is too low!</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!--    <bean id="student-name" class="xyz.txk.hellospring.pojo.Student" name="name">
+        <property name="name" value="txk"/>
+    </bean>
+    <bean id="student-address" class="xyz.txk.hellospring.pojo.Student" name="address_">
+        <property name="address" ref="address"/>
+    </bean>
+    <bean id="student-books" class="xyz.txk.hellospring.pojo.Student" name="array_">
+        <property name="books">
+            <array>
+                <value>MSF-从入门到跑路</value>
+                <value>论`rm -rf /*`</value>
+                <value>一键日卫星</value>
+            </array>
+        </property>
+    </bean>
+    <bean id="student-hobbys" class="xyz.txk.hellospring.pojo.Student" name="list_">
+        <property name="hobbys">
+            <list>
+                <value>日站</value>
+                <value>日站</value>
+                <value>还是TMD，日站</value>
+                <value>······</value>
+                <value>警察叔叔我是好人！！</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="student-card" class="xyz.txk.hellospring.pojo.Student" name="map_">
+        <property name="card">
+            <map>
+                <entry key="ikun1" value="唱"/>
+                <entry key="ikun2" value="跳"/>
+                <entry key="ikun3" value="rap"/>
+                <entry key="ikun4" value="篮球"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="student-games" class="xyz.txk.hellospring.pojo.Student" name="set_">
+        <property name="games">
+            <set>
+                <value>CF</value>
+                <value>COD</value>
+                <value>CSGO</value>
+                <value>LOL</value>
+            </set>
+        </property>
+    </bean>
+    <bean id="student-girlfriend" class="xyz.txk.hellospring.pojo.Student" name="null_">
+        <property name="girlfriend">
+            <null/>
+        </property>
+    </bean>
+    <bean id="student-info" class="xyz.txk.hellospring.pojo.Student" name="properties_">
+        <property name="info">
+            <props>
+                <prop key="user">root</prop>
+                <prop key="pwd">123456</prop>
+                <prop key="msg">The strength of the password is too low!</prop>
+            </props>
+        </property>
+    </bean>-->
+
+</beans>
